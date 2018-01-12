@@ -123,6 +123,15 @@
     margin-top: 20px;
 
 }
+.setnewpwd div:first-child:after{
+    content: "请确定密码";
+    color: red;
+
+}
+.setnewpwd div:nth-child(2):after{
+    content: "密码不一致";
+    color: red;
+}
 .input-icode{
     margin-right: 10px;
 }
