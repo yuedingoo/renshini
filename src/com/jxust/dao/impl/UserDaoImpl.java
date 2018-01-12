@@ -53,6 +53,7 @@ public class UserDaoImpl extends HibernateDaoSupport implements UserDao {
 	@Override
 	@Transactional(readOnly = false)
 	public void modifyPwd(String tele, String password) throws Exception {
+		System.out.println(tele+'+'+password);
 		// TODO Auto-generated method stub
 		List<User> list = (List<User>)this.getHibernateTemplate().find("from User where tele = ?", tele);
 		User u = list.get(0);

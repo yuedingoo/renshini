@@ -127,9 +127,9 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 			// 将信息放入值栈中到jsp中进行显示
 			HttpServletRequest request = ServletActionContext.getRequest();
 			request.setAttribute("msg", msg);
-			return "login";
+			return "index";
 		}
-		return "index";
+		return "info";
 	}
 	
 	/**
@@ -139,7 +139,8 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 */
 	public String modifyPwd() throws Exception {
 		userService.modifyPwd(user.getTele(), MD5Utils.md5(user.getPassword()));
-		return "login";
+		System.out.println(user.getTele() + '+' + user.getPassword());
+		return NONE;
 	}
 	
 	/**
