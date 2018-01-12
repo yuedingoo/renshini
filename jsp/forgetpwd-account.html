@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户</title>
+    <link href="../css/forgetpwd-account.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <span class="navbar-img"><img src="../img/logo-big.jpg" width="160" height="31"></span>
+        <span class="navbar-item"><a>帮助中心</a></span>
+        <span class="navbar-item"><a>给我们建议</a></span>
+        <span class="navbar-item"><a>注册</a></span>
+        <span class="navbar-item"><a>登录</a></span>
+
+    </div>
+    <div class="navbar-body">
+        <div class="navbar-body-head">
+                <div class="singlepage">
+                    <span><img src="../img/secur-center-logo.jpg" width="132" height="47"></span>
+                    <dl class="steps">
+                        <dt>找回密码</dt>
+                        <dd class="firset_selected">输入账号</dd>
+                        <dd class="step-color-grap">选择找回方式</dd>
+                        <dd class="steps-gray">重设密码</dd>
+                        <dd class="steps-gray">完成</dd>
+                    </dl>
+                </div>
+            </div>
+        <div class="find-pwd">
+            <div class="find-pwd-content">
+                <form method="post" action="" onsubmit="return false">
+                    <ul class="safe-data-box">
+                        <li><label>请选择您要找回登录账号的方式</label>
+                            <p class="radio-choice">
+                                <input type="radio" name="renren" checked="checked"><label>认识你账号</label>
+                                <input type="radio" name="phone"><label>电话号码</label>
+                                <input type="radio" name="other"><label>其它方式</label>
+                            </p>
+                        </li>
+                        <li><label>登录账号: </label><input class="input-text" type="text" name="account"></li>
+                        <li class="icode"><input class="captcha-type" type="hidden"><img src="../img/logo.png" alt="" style="cursor: pointer" height="60" width="145"><span class="captcha-btn"><a >换一张</a></span></li>
+                        <li><label for="validate_code" style="font-size: 14px">请输入验证码: </label><input id="validate_code" class="input-txt" type="text" name="captcha"></li>
+                        <li class="btn-box"><a class="safe-color-btn" style="border: 1px solid #1B6AAE">确定</a><a class="safe-gray-btn">取消</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+        <div class="find-end">
+
+        </div>
+    </div>
+</body>
+</html>
