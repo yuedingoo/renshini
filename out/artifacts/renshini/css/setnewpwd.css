@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+.navbar{
+    width: 100%;
+    height: 31px;
+    background-color: #1B6AAE;
+}
+.navbar-img{
+    float: left;
+    margin-left: 20px;
+}
+.navbar-item{
+    float: right;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.navbar-item a{
+    height: 31px;
+    line-height: 31px;
+    color:  #fff;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+.navbar-item a:hover{
+    color: red;
+}
+.body-steps{
+    background: #f0f4f7;
+    border-bottom: 1px solid #c5d2de;
+    width: 100%;
+    height: 89px;
+}
+.securityimg{
+    padding-top: 20px;
+    padding-left: 200px;
+    width: 780px;
+    height: 69px;
+    margin: 0 auto;
+    background: url("../img/secur-center-logo.jpg") no-repeat scroll 0 20px transparent;
+}
+.steps{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.steps dt{
+    float: left;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.steps .step-done{
+    background: #cbd7e0;
+    background-position: 0 -30px;
+}
+.steps .step-set{
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #90bc7b;
+}
+.steps .step-finish{
+    background-color: #cbd7e0;
+    padding-left: 20px;
+    background-position: 0px;
+}
+.steps dd{
+    background: url("../img/steps.png") no-repeat;
+    text-align: center;
+    float: left;
+    color: #666;
+    width: 120px;
+}
+.find-pwd{
+    background: #f6f6f6;
+    width: 980px;
+    height: 620px;
+    margin: 0 auto;
+    border: 1px solid #eaeaea;
+}
+.find-pwd-content{
+    text-align: center;
+    padding: 40px 20px 0;
+}
+.setnewpwd dl{
+    position: relative;
+    display: block;
+}
+.setnewpwd dl dd{
+    position: relative;
+    width: 296px;
+    background: #FFF url(http://a.xnimg.cn/n/apps/login/v6/cssimg/bg.png) 0 -76px no-repeat;
+    border: 1px solid #c0c7cd;
+    border-top-color: rgb(192, 199, 205);
+    border-right-color: rgb(192, 199, 205);
+    border-bottom-color: rgb(192, 199, 205);
+    border-left-color: rgb(192, 199, 205);
+    border-radius: 3px;
+    height: 44px;
+    box-shadow: 0 0 1px #FFF;
+    padding: 1px;
+}
+.input-text{
+    font-size: 16px;
+    height: 44px;
+    padding: 0 0 0 15px;
+    width: 281px;
+    border: none;
+}
+.geticode-btn:hover{
+    color: #009ae7;
+}
+.setnewpwd div{
+    width: 740px;
+    margin-top: 20px;
+
+}
+.input-icode{
+    margin-right: 10px;
+}
+.setnewpwd div input{
+    border: 1px solid #308EE6;
+}

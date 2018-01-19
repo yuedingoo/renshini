@@ -7,9 +7,9 @@
 	<package name="dome1" extends="struts-default" namespace="/">
 		
 		<!-- 每次跳转到主页面时不仅仅是简单的页面显示，需要进行数据库的查询，所以需要经过indexAction（重定向到action中） -->
-		<global-results>
+		<!--<global-results>
 			<result name="index" type="redirectAction">index_index</result>
-		</global-results>
+		</global-results>-->
 	
 		<!-- 主页面的显示 -->
 		<action name="index_*" class="indexAction" method="{1}">
@@ -18,7 +18,8 @@
 		
 		<!-- 有关用户的查询 -->
 		<action name="user_*" class="userAction" method="{1}">
-			<result name="login">/jsp/login.jsp</result>
+			<result name="index">/jsp/index.jsp</result>
+			<result name="info">/jsp/info.jsp</result>
 			<result name="fpwd">/jsp/forget-pwd.jsp</result>
 		</action>
 		

@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+}
+.navbar{
+    width: 100%;
+    height: 31px;
+    background-color: #1B6AAE;
+}
+.navbar-img{
+    float: left;
+    margin-left: 20px;
+}
+.navbar-item{
+    float: right;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+.navbar-item a{
+    height: 31px;
+    line-height: 31px;
+    color:  #fff;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+}
+.navbar-item a:hover{
+    color: red;
+}
+.body-steps{
+    background: #f0f4f7;
+    border-bottom: 1px solid #c5d2de;
+    width: 100%;
+    height: 89px;
+}
+.securityimg{
+    padding-top: 20px;
+    padding-left: 200px;
+    width: 780px;
+    height: 69px;
+    margin: 0 auto;
+    background: url("../img/secur-center-logo.jpg") no-repeat scroll 0 20px transparent;
+}
+.steps{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 12px;
+}
+.steps dt{
+    float: left;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.steps .step-done{
+    background: #cbd7e0;
+
+}
+.steps .step-set{
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #cbd7e0;
+    background-position: 0 -60px;
+}
+.steps .step-finish{
+    padding-left: 20px;
+    background-color: #90bc7b;
+}
+.steps dd{
+    background: url("../img/steps.png") no-repeat;
+    text-align: center;
+    float: left;
+    color: #666;
+    width: 120px;
+}
+.find-pwd{
+    background: #f6f6f6;
+    width: 980px;
+    height: 620px;
+    margin: 0 auto;
+    border: 1px solid #eaeaea;
+}
+.find-pwd .back{
+    margin: 200px auto;
+    font-size: 19px;
+    font-weight: bold;
+}
+.find-pwd .back span:first-child{
+    margin: 10px auto;
+}
+.find-pwd .back span:first-child img{
+    vertical-align: middle;
+}
+.back .back-img{
+    margin: 10px auto;
+    width: 400px;
+}
+.back-img span a:hover{
+    color: #48b770;
+}
+.back-time {
+    margin: 50px auto;
+    width: 400px;
+}

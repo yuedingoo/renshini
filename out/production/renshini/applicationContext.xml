@@ -17,7 +17,7 @@
 	<!-- 配置数据库的连接 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql:///know-you?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+		<property name="jdbcUrl" value="jdbc:mysql:///renshini?useUnicode=true&amp;characterEncoding=UTF-8"></property>
 		<property name="user" value="root"></property>
 		<property name="password" value="zhang79113mysql"></property>
 	</bean>
