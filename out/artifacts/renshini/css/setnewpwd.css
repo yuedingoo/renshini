@@ -115,6 +115,15 @@
     width: 281px;
     border: none;
 }
+.setnewpwd{
+    position: relative;
+}
+.reinput-newpwd{
+    position: absolute;
+    right: 300px;
+    margin-top: -10px;
+}
+
 .geticode-btn:hover{
     color: #009ae7;
 }

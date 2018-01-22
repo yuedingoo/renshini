@@ -2,7 +2,7 @@
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-  <head>
+	<head>
     <title>My JSP 'index.jsp' starting page</title>
 
 	<meta http-equiv="pragma" content="no-cache">
@@ -72,22 +72,22 @@
 		  <div class="find-pwd" id="fpwd2" style="display: none;">
 			  <div class="find-pwd-content">
 				  <div class="setnewpwd" style="padding-left: 45px">
-					  <div>
-						  新密码:<input placeholder="请输入密码" type="password" style="color: rgb(136, 136, 136); width: 361px;height: 45px;margin-left: 20px;" class="input-newpwd"  id="pwd">
+					  <div >
+						  新密码:&nbsp;<input placeholder="请输入密码" id="pwd" type="password" style="color: rgb(136, 136, 136); width: 361px;height: 45px;margin-left: 20px;" name="newpwd" class="input-newpwd" >
 					  </div>
-					  <div>
-						  确定密码:<input placeholder="请确定密码" type="password" style="color: rgb(136, 136, 136);width: 361px;height: 45px;" name="password" class="reinput-newpwd" id="pwd1">
-						  <span id="pwdError"><img/></span><span id="pwdErrorDesc"></span>
+					  <div  >
+						  确定密码:&nbsp;<input placeholder="请确定密码" id="pwd1" type="password" style="color: rgb(136, 136, 136);width: 361px;height: 45px;" name="renewpwd" class="reinput-newpwd">
 					  </div>
-					  <div>
-						  短信验证码:<input type="test" style="color: rgb(136, 136, 136);width: 180px;height: 45px" id="code" name="code" class="input-icode" placeholder="请输入验证码">
-						  <input style="height: 34px;width: 150px;margin-right: 34px" class="geticode-btn" type="button" value="免费获取验证码" onclick="getCode()">
-						  <span id="codeError"><img/></span><span id="codeErrorDesc"></span><!-- 获取手机验证码 -->
+					  <div >
+						  短信验证码:&nbsp;<input type="test" style="color: rgb(136, 136, 136);width: 180px;height: 45px" name="icode" class="input-icode" placeholder="请输入验证码"><input style="height: 34px;width: 150px;margin-right: 34px" class="geticode-btn" type="button" value="免费获取验证码">
 					  </div>
 					  <div class="submit-newpwd" style="margin-left: 20px">
-						  <%-- 先不做 --%>
+
 						  <input type="button" class="previous-btn" value="上一步" style="width: 160px;height: 43px;border-radius: 3px;cursor: pointer;border:none;font-size: 18px;color: #fff;">
-						  <input type="button" class="next-btn" value="下一步" onclick="nextStep()" style="width: 160px;height: 43px;border-radius: 3px;cursor: pointer;border:none;font-size: 18px;color: #fff;background-color: #308EE6">
+
+
+						  <input type="button" class="next-btn" value="下一步" style="width: 160px;height: 43px;border-radius: 3px;cursor: pointer;border:none;font-size: 18px;color: #fff;background-color: #308EE6">
+
 					  </div>
 				  </div>
 			  </div>
@@ -133,8 +133,9 @@
     /* 判断两次输入的密码是否一致 */
     $('#pwd1').blur(function(){
         if($(this).val() == $('#pwd').val()){
-            $('#pwdError img').attr('src','${pageContext.request.contextPath }/img/verifycode_success.png');
-            $('#pwdErrorDesc').html('');
+            <%--$('#pwdError img').attr('src','${pageContext.request.contextPath }/img/verifycode_success.png');--%>
+            <%--$('#pwdErrorDesc').html('');--%>
+			$('#pwd1').append("<style>#pwd1::after{background-image: '${pageContext.request.contextPath }/img/verifycode_success.png'}<style>")
         }else{
             $('#pwdError img').attr('src','${pageContext.request.contextPath }/img/verifycode_valid.png');
             $('#pwdErrorDesc').html('两次输入的密码不一致');

@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="renshini" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="ssh" />
+          <element id="library" level="project" name="Struts2" />
+          <element id="library" level="project" name="Junit" />
+        </element>
       </element>
     </root>
   </artifact>
