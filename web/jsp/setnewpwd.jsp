@@ -3,7 +3,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <head>
     <meta charset="UTF-8">
-    register.jsp
     <title>找回密码-安全中心</title>
     <link href="../css/setnewpwd.css" rel="stylesheet">
 </head>

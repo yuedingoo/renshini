@@ -39,7 +39,7 @@
 				  <dt>找回密码</dt>
 				  <dd class="firset_selected">输入账号</dd>
 				  <dd class="steps-gray">重设密码</dd>
-				  <dd class="steps-gray">完成</dd>
+				  <dd class="steps-gray-finish">完成</dd>
 			  </dl>
 		  </div>
 	  </div>
@@ -61,7 +61,7 @@
 						  <label>手机号: </label><input class="input-text" type="text" name="tele" id="tele">
 						  <span id="teleError"><img/></span><span id="teleErrorDesc"></span><br>
 					  </li>
-					  <li class="icode"><input class="captcha-type" type="hidden"><img src="${pageContext.request.contextPath }/img/logo.png" alt="" style="cursor: pointer" height="60" width="145"><span class="captcha-btn"><a >换一张</a></span></li>
+					  <li class="icode"><input class="captcha-type" type="hidden"><img src="${pageContext.request.contextPath }/img/logo.png" alt="" style="cursor: pointer;vertical-align: middle" height="60" width="145"><span class="captcha-btn"><a >换一张</a></span></li>
 					  <li><label for="validate_code" style="font-size: 14px">请输入验证码: </label><input id="validate_code" class="input-txt" type="text" name="captcha"></li>
 					  <li class="btn-box"><a href="javascript:void(0);" onclick="ifPhone()" class="safe-color-btn" style="border: 1px solid #1B6AAE">确定</a><a class="safe-gray-btn">取消</a></li>
 				  </ul>

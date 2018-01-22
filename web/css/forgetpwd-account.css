@@ -69,6 +69,11 @@
     font-weight: bold;
     background: #90bc7b;
 }
+.steps .steps-gray-finish{
+    background-position: 0 -60px;
+    background-color: #cbd7e0;
+    padding-left: 20px;
+}
 .steps dd{
     background: url("../img/steps.png") no-repeat;
     background-color: rgba(0, 0, 0, 0);
@@ -85,11 +90,11 @@
     padding-left: 20px;
 }
 .steps .steps-gray{
-    background-position: 0 -60px;
+    background-position: 0 -30px;
     background-color: #cbd7e0;
-
     padding-left: 20px;
 }
+
 .find-pwd{
     background: #f6f6f6;
     width: 980px;

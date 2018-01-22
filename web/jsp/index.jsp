@@ -61,8 +61,9 @@
                     </div>
                     <div class="form-login">
                         <form action="${pageContext.request.contextPath }/user_login.action" method="post">
-                            <span>${msg}</span>
+                            <span style="font-size: 12px;color: red">${msg}132</span>
                             <input type="text" name="tele" class="input-text" placeholder="邮箱/手机号/用户名" style="color: rgb(136, 136, 136); height: 44px;width: 300px">
+                            <span style="font-size: 12px;color: red">123</span>
                             <input type="password" name="password" class="input-passwprd" placeholder="请输入密码" style="color: rgb(136, 136, 136);height: 44px;width: 300px;visibility: visible">
                             <div class="savepassword">
                                 <label title="为了保证您的账号安全，请不要在公共场所点此项" class="label-checkbox">  <input type="checkbox" name="">记住账号</label>
