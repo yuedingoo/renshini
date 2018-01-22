@@ -11,6 +11,7 @@
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 
+<<<<<<< HEAD
       <link href="${pageContext.request.contextPath }/css/index.css?version=1.0" rel="stylesheet">
       <script src="../js/jquery-3.2.1.min.js"></script>
   <script type="application/javascript">
@@ -26,6 +27,10 @@
           })
       })
   </script>
+=======
+      <link href="${pageContext.request.contextPath }/css/index.css?version=2.0" rel="stylesheet">
+
+>>>>>>> 21e60c484647936f691c1ad0c5ed45e44a75ba7f
   </head>
 
   <body>
@@ -68,7 +73,13 @@
                                 <span class="forgetpwd"><a href="${pageContext.request.contextPath }/jsp/forget-pwd.jsp">忘记密码?</a></span>
                             </div>
                             <div class="reg-and-login">
+<<<<<<< HEAD
                                 <input type="button" class="reg-and-login-reg" onclick="Toregisterpage()"  value="注册"></input>
+=======
+                            	<div class="reg-and-login-reg">
+                                	<a href="${pageContext.request.contextPath }/jsp/register.jsp">注册</a>
+                                </div>
+>>>>>>> 21e60c484647936f691c1ad0c5ed45e44a75ba7f
                                 <input type="submit" class="reg-and-login-login" value="登录">
                             </div>
                         </form>

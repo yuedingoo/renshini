@@ -11,7 +11,7 @@
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 
-	<link href="${pageContext.request.contextPath }/css/register.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/css/register.css?version=1.0" rel="stylesheet">
 
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-3.2.1.min.js"></script>
 
@@ -49,8 +49,8 @@
 					  <span id="teleError"><img/></span><span id="teleErrorDesc"></span><br>
 				  </div>
 				  <div class="next-form-item">
-					  <input type="text" name="code" id="code" placeholder="输入校验码"/>
-					  <span onclick="getCode()">获取短信验证码</span>
+					  <input type="text" class="code" name="code" id="code" placeholder="输入校验码"/>
+					  <span class="getCode" onclick="getCode()">获取短信验证码</span>
 					  <span id="codeError"><img/></span><span id="codeErrorDesc"></span><!-- 获取手机验证码 -->
 				  </div>
 				  <div class="next-form-item-submit">
