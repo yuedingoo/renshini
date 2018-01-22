@@ -19,11 +19,7 @@
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="jdbcUrl" value="jdbc:mysql:///mysql?useUnicode=true&amp;characterEncoding=UTF-8"></property>
 		<property name="user" value="root"></property>
-<<<<<<< HEAD
 		<property name="password" value="raoxiaobo123"></property>
-=======
-		<property name="password" value="renshini123"></property>
->>>>>>> 21e60c484647936f691c1ad0c5ed45e44a75ba7f
 	</bean>
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<!-- <property name="configLocation" value="classpath:hibernate.cfg.xml"></property> -->
