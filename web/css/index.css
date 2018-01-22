@@ -107,49 +107,18 @@ a{
     height: 100px;
     margin: 12px auto;
     overflow: hidden;
+    position: relative;
+}
 
-}
-#errormessage{
-    position: absolute;
-    z-index: 1000;
-    background-color: #ffe3d6;
-    color: red;
-    width: 300px;
-    top: 120px;
-    left: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-}
 .form-login{
     padding: 30px;
     width: 208px;
-}
-.inputname{
-    display: inline-block;
-}
-.inputpwd{
-    display: inline-block;
-
-}
-.inputname:after{
-    display: block;
-    content: "请输入正确号码";
-    color: red;
 }
 .input-text{
   box-shadow: 0 0 1px #FFF;
     border: 1px solid #c0c7cd;
     border-radius: 3px;
     padding: 1px;
-
-}
-.input-text:after{
-    content: "asdadadas";
-    display: block;
-    height: 10px;
-    width: 100px;
-    clear: both;
 
 }
 .input-passwprd{
