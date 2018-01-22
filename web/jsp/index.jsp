@@ -11,7 +11,7 @@
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
 
-      <link href="${pageContext.request.contextPath }/css/index.css?version=1.0" rel="stylesheet">
+      <link href="${pageContext.request.contextPath }/css/index.css?version=2.0" rel="stylesheet">
 
   </head>
   
@@ -49,13 +49,15 @@
                         <form action="${pageContext.request.contextPath }/user_login.action" method="post">
                             <span>${msg}</span>
                             <input type="text" name="tele" class="input-text" placeholder="邮箱/手机号/用户名" style="color: rgb(136, 136, 136); height: 44px;width: 300px">
-                            <input type="password" name="password" class="input-passwprd" placeholder="请输入密码" style="color: rgb(136, 136, 136);height: 44px;width: 300px;visibility: visible"
+                            <input type="password" name="password" class="input-passwprd" placeholder="请输入密码" style="color: rgb(136, 136, 136);height: 44px;width: 300px;visibility: visible">
                             <div class="savepassword">
                                 <label title="为了保证您的账号安全，请不要在公共场所点此项" class="label-checkbox">  <input type="checkbox" name="">记住账号</label>
                                 <span class="forgetpwd"><a href="${pageContext.request.contextPath }/jsp/forget-pwd.jsp">忘记密码?</a></span>
                             </div>
                             <div class="reg-and-login">
-                                <a  class="reg-and-login-reg" href="${pageContext.request.contextPath }/jsp/register.jsp">注册</a>
+                            	<div class="reg-and-login-reg">
+                                	<a href="${pageContext.request.contextPath }/jsp/register.jsp">注册</a>
+                                </div>
                                 <input type="submit" class="reg-and-login-login" value="登录">
                             </div>
                         </form>
@@ -73,26 +75,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="center-right">
-                    <div class="center-right-advertise">
-                        <div class="img">
-                            <img width="600" height="360" src="http://file02.16sucai.com/d/file/2014/1027/31be1dd7cc2d4631aa1d99edfb26b080.jpg" alt="img" href="">
-                        </div>
+            </div>
+            <div class="center-right">
+                <div class="center-right-advertise">
+                    <div class="img">
+                        <img width="600" height="360" src="http://file02.16sucai.com/d/file/2014/1027/31be1dd7cc2d4631aa1d99edfb26b080.jpg" alt="img" href="">
                     </div>
-                    <div class="login-recommand">
-                        <div class="intro">
-                            <div class="item unactive">
-                                <a class="qrcode content" href="#"></a>
-                            </div>
-                            <div class="item unactive">
-                                <a class="phone content" href="#"></a>
-                            </div>
-                            <div class="item unactive">
-                                <a class="pad content" href="#"></a>
-                            </div>
-                            <div class="item unactive">
-                                <a class="other content" href="#"></a>
-                            </div>
+                </div>
+                <div class="login-recommand">
+                    <div class="intro">
+                        <div class="item unactive">
+                            <a class="qrcode content" href="#"></a>
+                        </div>
+                        <div class="item unactive">
+                            <a class="phone content" href="#"></a>
+                        </div>
+                        <div class="item unactive">
+                            <a class="pad content" href="#"></a>
+                        </div>
+                        <div class="item unactive">
+                            <a class="other content" href="#"></a>
                         </div>
                     </div>
                 </div>

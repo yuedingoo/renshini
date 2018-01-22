@@ -163,6 +163,14 @@ a{
 
 
  }
+ .reg-and-login-reg a{
+ 	display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    color: #fff;
+ }
 .reg-and-login-login {
     width: 140px;
     height: 100%;
