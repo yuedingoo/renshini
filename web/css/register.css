@@ -118,6 +118,7 @@ body{
     height: 40px;
     border: 1px solid   #c3c5c6;
     margin-bottom: 20px;
+    position: relative;
 }
 .content .next-form-item-phone input{
     width: 270px;

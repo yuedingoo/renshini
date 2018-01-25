@@ -20,8 +20,16 @@
 		<action name="user_*" class="userAction" method="{1}">
 			<result name="index">/jsp/index.jsp</result>
 			<result name="info">/jsp/info.jsp</result>
-			<result name="fpwd">/jsp/forget-pwd.jsp</result>
+			<result name="register">/jsp/register.jsp</result>
+			<result name="fpwd_step1_success">/jsp/setnewpwd.jsp</result>
+			<result name="fpwd_step1_failure">/jsp/accountIfExist.jsp</result>
+			<result name="fpwd_step2_failure">/jsp/setnewpwd.jsp</result>
+			<result name="fpwd_step2_success">/jsp/setnewpwdsuccess.jsp</result>
 		</action>
-		
+	</package>
+
+	<package name="APP" extends="struts-default" namespace="/">
+		<action name="index" class="indexActionAPP"></action>
+		<action name="appUser_*" class="userActionAPP" method="{1}"></action>
 	</package>
 </struts>

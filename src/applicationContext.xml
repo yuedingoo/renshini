@@ -17,9 +17,9 @@
 	<!-- 配置数据库的连接 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
-		<property name="jdbcUrl" value="jdbc:mysql:///mysql?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+		<property name="jdbcUrl" value="jdbc:mysql:///renshini?useUnicode=true&amp;characterEncoding=UTF-8"></property>
 		<property name="user" value="root"></property>
-		<property name="password" value="raoxiaobo123"></property>
+		<property name="password" value="renshini123"></property>
 	</bean>
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<!-- <property name="configLocation" value="classpath:hibernate.cfg.xml"></property> -->
@@ -50,14 +50,22 @@
 	<!-- 开启事务注解 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
-	<!-- 在spring中配置action -->
+	<!-- 在spring中配置action（web、app版本） -->
 	<bean id="indexAction" class="com.jxust.web.action.IndexAction" scope="prototype">
 		<property name="indexService" ref="indexService"></property>
 	</bean>
 	<bean id="userAction" class="com.jxust.web.action.UserAction" scope="prototype">
 		<property name="userService" ref="userService"></property>
 	</bean>
-	
+
+	<bean id="indexActionAPP" class="com.jxust.app.action.indexActionAPP" scope="prototype">
+		<property name="indexService" ref="indexService"></property>
+	</bean>
+	<bean id="userActionAPP" class="com.jxust.app.action.userActionAPP" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+
 	<!-- 创建Service层对象 -->
 	<bean id="indexService" class="com.jxust.service.impl.IndexServiceImpl">
 		<property name="indexDao" ref="indexDao"></property>

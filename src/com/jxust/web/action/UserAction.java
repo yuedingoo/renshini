@@ -25,7 +25,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		// TODO Auto-generated method stub
 		return user;
 	}
-	
+
 	private UserService userService;
 	public void setUserService(UserService userService){
 		this.userService = userService;
@@ -37,6 +37,15 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 * @throws Exception
 	 */
 	public String regist() throws Exception {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String code = (String) request.getSession().getAttribute("code");//之前生成的短信
+		// 进行验证码的判断
+		String msg = null;
+		if(!code.equals(icode)){
+			msg = "验证码不正确";
+			request.setAttribute("msg", msg);
+			return "register";
+		}
 		user.setPassword(MD5Utils.md5(user.getPassword()));//为密码进行加密
 		userService.regist(user);
 		return "index";
@@ -46,7 +55,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 * 获取短信验证码
 	 * @return
 	 */
-	public String getSMSCode(){
+	public String getSMSCode() throws Exception {
 		/*短信验证
 		 * String host = "http://fesms.market.alicloudapi.com";
 	    String path = "/sms/";
@@ -59,14 +68,14 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	    querys.put("phone", user.getTele());//向谁发送
 	    querys.put("skin", "5");//发送信息皮肤
 //	    querys.put("sign", "认识你");//标签名
-		
+
 	    try{
 			HttpResponse response = HttpUtils.doGet(host, path, method, headers, querys);
 	    	System.out.println(response.toString());
 		} catch (Exception e) {
 	    	e.printStackTrace();
 	    }*/
-		
+
 		// 测试使用（上面的是定稿模板）
 		String str = VerificationCodeUtil.get6RandomNumber();//模拟生成的短信验证码
 		HttpServletResponse response = ServletActionContext.getResponse();
@@ -74,31 +83,8 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		HttpServletRequest request = ServletActionContext.getRequest();
 //因为请求响应是无状态的，当使用异步请求发送短信验证时，只能调用这个方法，不能会调用其它方法；当信息填写完成就行提交时会调用regist方法，其中需要之前生成的短信验证码，所以要在生成时进行保存
 		request.getSession().setAttribute("code", str);
-	    
+
 	    return NONE;
-	}
-	
-	/**
-	 * 验证输入的短信验证码是否正确
-	 * @return
-	 */
-	private String vcode;
-	public void setVcode(String vcode){
-		this.vcode = vcode;
-	}
-	public String verificationSMS(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		HttpServletResponse response = ServletActionContext.getResponse();
-		String code = (String) request.getSession().getAttribute("code");//之前生成的短信
-		// 进行验证码的判断
-		String msg = null;
-		if(code.equals(vcode)){
-			msg = "验证码输入正确";
-		}else{
-			msg = "验证码不正确";
-		}
-		FastJsonUtil.write_json(response, msg);
-		return NONE;
 	}
 	
 	/**
@@ -131,18 +117,8 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 		}
 		return "info";
 	}
-	
-	/**
-	 * 修改密码（设置新密码）
-	 * @return
-	 * @throws Exception
-	 */
-	public String modifyPwd() throws Exception {
-		userService.modifyPwd(user.getTele(), MD5Utils.md5(user.getPassword()));
-		System.out.println(user.getTele() + '+' + user.getPassword());
-		return NONE;
-	}
-	
+
+/************ 忘记密码实现 */
 	/**
 	 * 判断是否为已注册手机号（忘记密码第一步）
 	 * @return
@@ -151,14 +127,37 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	public String fpwd1() throws Exception{
 		String tele = userService.fpwd1(user.getTele());
 		String msg = null;
+		HttpServletRequest request = ServletActionContext.getRequest();
 		if(tele == null){
 			msg = "此手机号未注册，请输入正确的账号";
-		}else{
-			msg = "账号存在";
+			request.setAttribute("msg",msg);
+			return "fpwd_step1_failure";
 		}
-		HttpServletResponse response = ServletActionContext.getResponse();
-		FastJsonUtil.write_json(response, msg);
-		return NONE;
+		request.setAttribute("tele", tele);
+		return "fpwd_step1_success";
+	}
+
+	/**
+	 * 修改密码（设置新密码）
+	 * @return
+	 * @throws Exception
+	 */
+	private String icode;
+	public void setIcode(String icode){
+		this.icode = icode;
+	}
+	public String modifyPwd() throws Exception {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String code = (String) request.getSession().getAttribute("code");//之前生成的短信
+		// 进行验证码的判断
+		String msg = null;
+		if(!code.equals(icode)){
+			msg = "验证码不正确";
+			request.setAttribute("msg", msg);
+			return "fpwd_step2_failure";
+		}
+		userService.modifyPwd(user.getTele(), MD5Utils.md5(user.getPassword()));
+		return "fpwd_step2_success";
 	}
 
 }

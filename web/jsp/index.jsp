@@ -61,13 +61,15 @@
                     </div>
                     <div class="form-login">
                         <form action="${pageContext.request.contextPath }/user_login.action" method="post">
-                            <span style="font-size: 12px;color: red">${msg}132</span>
+                            <span style="font-size: 12px;color: red">${msg}</span>
                             <input type="text" name="tele" class="input-text" placeholder="邮箱/手机号/用户名" style="color: rgb(136, 136, 136); height: 44px;width: 300px">
-                            <span style="font-size: 12px;color: red">123</span>
+                            <span style="font-size: 12px;color: red"></span>
                             <input type="password" name="password" class="input-passwprd" placeholder="请输入密码" style="color: rgb(136, 136, 136);height: 44px;width: 300px;visibility: visible">
                             <div class="savepassword">
                                 <label title="为了保证您的账号安全，请不要在公共场所点此项" class="label-checkbox">  <input type="checkbox" name="">记住账号</label>
-                                <span class="forgetpwd"><a href="${pageContext.request.contextPath }/jsp/forget-pwd.jsp">忘记密码?</a></span>
+                                <span class="forgetpwd">
+                                    <a href="${pageContext.request.contextPath }/jsp/accountIfExist.jsp">忘记密码?</a>
+                                </span>
                             </div>
                             <div class="reg-and-login">
                                 <input type="button" class="reg-and-login-reg" onclick="Toregisterpage()"  value="注册"></input>

@@ -18,11 +18,6 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
           <element id="library" level="project" name="ssh" />
-          <element id="library" level="project" name="Struts2" />
-          <element id="library" level="project" name="Junit" />
-          <element id="library" level="project" name="Spring" />
-          <element id="library" level="project" name="Hibernate" />
-          <element id="library" level="project" name="qita" />
         </element>
         <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <element id="directory" name="classes">
