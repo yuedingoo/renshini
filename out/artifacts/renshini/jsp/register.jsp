@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>用户注册</title>
 
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath }/js/jquery-3.2.1.min.js"></script>
 
   </head>
-  
+
   <body>
 
   <div class="register-2018-header">
@@ -32,7 +32,7 @@
 		  <div class="content">
 			  <div class="head">欢迎注册认识你网站</div>
 			  <div class="tips"><span>已有认识你账号?</span><a class="tips-link" href="${pageContext.request.contextPath }/index.jsp">&nbsp;快捷登录></a></div>
-			  <form action="${pageContext.request.contextPath }/user_regist.action" class="next-form">
+			  <form action="${pageContext.request.contextPath }/user_register.action" class="next-form" method="post">
 				  <div class="next-form-item">
 					  <input type="text" value="" placeholder="请设置用户名" name="name">
 					  <span id="nameError"><img/></span>
@@ -56,8 +56,8 @@
 					  <span class="getCode" onclick="getCode()">获取短信验证码</span>
 					  <span id="codeErrorDesc">${msg}</span><!-- 获取手机验证码 -->
 				  </div>
-				  <div class="next-form-item-submit">
-					  <input type="submit" value="同意条款并注册" >
+				  <div id="submit" class="next-form-item-submit">
+					  <input type="submit" value="同意条款并注册" onclick="return false;" ondblclick="errorTip();">
 				  </div>
 				  <div class="next-form-item-receive">
 					  点击完成注册表示您接收<span><a>认识你网服务条款</a></span>
@@ -71,6 +71,6 @@
 
   </body>
 
-  <script type="text/javascript" src="${pageContext.request.contextPath }/js/info-verification.js?version=1.0"></script>
+  <script type="text/javascript" src="${pageContext.request.contextPath }/js/info-verification.js?version=2.0"></script>
   
 </html>

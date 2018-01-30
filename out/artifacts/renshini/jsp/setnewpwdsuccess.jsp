@@ -56,6 +56,7 @@
             setTimeout("lazyGo();", 1000);
         }else{
             window.location.href = "http://localhost:8080/index.jsp";
+            /*window.location.href = "http://ityueding.cn";*/
         }
     }
 </script>

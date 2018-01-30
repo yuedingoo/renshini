@@ -71,3 +71,24 @@ function getCode(){
       }
     },"text");//返回的中文需要使用text，可以直接输出，json不行
 });*/
+
+/* 注册页面（当信息填写完全时允许提交，否则提示“请填写完整信息”） */
+$('#submit').mouseover(function () {    //鼠标移入时进行判断信息填写是否完整
+    var nameInfo = $('#nameError img').attr('src');
+    var pwdInfo = $('#pwdError img').attr('src');
+    var teleInfo = $('#teleError img').attr('src');
+    var info = "../img/verifycode_success.png";
+    var submit = "input[type='submit']";
+    if(nameInfo == info && pwdInfo == info && teleInfo == info){//填写完整，可以提交表单（双击的提示信息拿了）
+        $(submit).removeAttr('onclick');
+        $(submit).removeAttr('ondblclick');
+    }else{//反之，是否已经禁止，没有添加禁止（还有加上信息提示）
+        if(($(submit).attr('onclick') != "return false;")){
+            $(submit).attr('onclick', 'return false;');
+            $(submit).attr('ondblclick', 'errorTip();');
+        }
+    }
+});
+function errorTip() {
+    alert('请输入完整信息！');
+}
