@@ -36,7 +36,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 * @return
 	 * @throws Exception
 	 */
-	public String regist() throws Exception {
+	public String register() throws Exception {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String code = (String) request.getSession().getAttribute("code");//之前生成的短信
 		// 进行验证码的判断
@@ -124,7 +124,7 @@ public class UserAction extends ActionSupport implements ModelDriven<User>{
 	 * @return
 	 * @throws Exception
 	 */
-	public String fpwd1() throws Exception{
+	public String accountIfExist() throws Exception{
 		String tele = userService.fpwd1(user.getTele());
 		String msg = null;
 		HttpServletRequest request = ServletActionContext.getRequest();
