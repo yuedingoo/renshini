@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #305E67;
+}
+input{
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: #aaa;
+}
+.second-head{
+    background-color: #000000;
+}
+.second-head-img {
+    width: 100%;
+    text-align: center;
+}
+.second-head-img-head{
+    width: 100%;
+}
+.second-head-img-head img{
+    display: block;
+    margin: 0 auto;
+}
+.second-head-img-name{
+    width: 100%;
+    margin-top: 5px;
+}
+.second-head-img-content{
+    width: 600px;
+    margin: 0 auto;
+}
+.second-head-img-name span{
+    margin-right: 20px;
+}
+.second-head-img-content .name{
+    text-align: left;
+}
+.second-head-img-content .note{
+    text-align: left;
+    margin-top:5px ;
+}
+.second-head-img-content .star{
+    text-align: left;
+    margin-top:5px ;
+}
+.second-head-img-content .job{
+    margin-top: 5px;
+    text-align: left;
+}
+.second-head-img-content .name span{
+    margin-right: 5px;
+}
+.second-head-img-star{
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+.second-head-img-content .star .radio-hobby{
+    margin-left: 360px;
+    margin-top: -20px;
+}
+.second-head-img-content .company{
+    margin-top: 5px;
+}
+.second-head-img-content .home{
+    margin-top: 5px;
+}
+.second-head-img-personal{
+    width: 700px;
+    margin: 5px auto;
+    border: 1px solid red;
+}
+.second-head-img-data{
+    width: 300px;
+    text-align: left;
+    margin-top: 20px;
+}
+.second-head-img-data span{
+    margin-left: 20px;
+}
+.second-head-img-shuoshuo{
+    text-align: left;
+    margin-left: 30px;
+}
+.second-head-img-submit{
+    text-align: left;
+    margin-left: 550px;
+    margin-top: 10px;
+}
+.second-head-img-punished{
+    text-align: left;
+    margin-left: 30px;
+}
+.second-head-img-delete{
+    text-align: right;
+    margin-right: 110px;
+    margin-top: 10px;
+}
+.second-head-img-more{
+    text-align: right;
+    margin-right: 110px;
+    margin-top: 10px;
+}
+.second-head-img-picturegroup1{
+    width: 210px;
+    height: 229px;
+    margin: 5px auto;
+    background-color: #2E2E2E;
+    display: inline-block;
+    /*box-shadow: 0 1px 4px rgba(0,0,0,.15);*/
+}
+.second-head-img-picturegroup1-img {
+    position: relative;
+
+}
+.second-head-img-hidden{
+    /*overflow: hidden;*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+
+}
+.second-head-img-picturegroup1-img img:hover{
+    cursor: pointer;
+}
+.second-head-img-picturegroup1-img:hover .btn-group{
+    display: block;
+}
+.second-head-img-picturegroup1-img img{
+    padding-top: 7px;
+}
+
+.second-head-img-pictureList{
+    text-align: left;
+    margin-left: 30px;
+}
+.second-head-img-line{
+    margin-top: 20px;
+}
