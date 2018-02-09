@@ -6,16 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d433eeb0-2cbc-4844-83aa-2c7737672160" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/applicationContext.xml" afterPath="$PROJECT_DIR$/src/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jxust/web/action/UserAction.java" afterPath="$PROJECT_DIR$/src/com/jxust/web/action/UserAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/info-verification.js" afterPath="$PROJECT_DIR$/web/js/info-verification.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/accountIfExist.jsp" afterPath="$PROJECT_DIR$/web/jsp/accountIfExist.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/index.jsp" afterPath="$PROJECT_DIR$/web/jsp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/info.jsp" afterPath="$PROJECT_DIR$/web/jsp/info.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/register.jsp" afterPath="$PROJECT_DIR$/web/jsp/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/jsp/setnewpwdsuccess.jsp" afterPath="$PROJECT_DIR$/web/jsp/setnewpwdsuccess.jsp" />
-    </list>
+    <list default="true" id="d433eeb0-2cbc-4844-83aa-2c7737672160" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,7 +80,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -391,15 +382,15 @@
       <workItem from="1516714245830" duration="687000" />
       <workItem from="1516783202442" duration="14574000" />
       <workItem from="1516846120176" duration="7321000" />
-      <workItem from="1517301731110" duration="7653000" />
+      <workItem from="1517301731110" duration="8258000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72620000" />
+    <option name="totallyTimeSpent" value="73225000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -770,7 +761,7 @@
         <state relative-caret-position="460">
           <caret line="53" column="60" lean-forward="true" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
           <folding>
-            <element signature="n#style#0;n#input#1;n#div#5;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#5;n#div#0;n#div#0;n#form#0;n#div#2;n#body#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
